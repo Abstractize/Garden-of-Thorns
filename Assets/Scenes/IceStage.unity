@@ -388,8 +388,8 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 1.2
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
+  endReachedDistance: 0
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
   constrainInsideGraph: 0
@@ -704,6 +704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146366327232664763, guid: 581769422c56a4abb9ea74408a1d3e2c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 581769422c56a4abb9ea74408a1d3e2c, type: 3}
@@ -1266,6 +1271,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 530488083}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1712299275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2163451291054274980, guid: 581769422c56a4abb9ea74408a1d3e2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 609966839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1712299280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712299275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e608351b7f8b04045a0d006d1e65acb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aIPath: {fileID: 358428140}
 --- !u!4 &1742461252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5058488737776582971, guid: 74e96687169d6ef468cef6a2731617aa,
