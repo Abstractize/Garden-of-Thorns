@@ -120,18 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &963598347 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7991669768235246791, guid: 6b33fa318c07449c08971cf3b1d5f790,
-    type: 3}
-  m_PrefabInstance: {fileID: 7991669769152281804}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a67c141265ab543a0da6f7ec6cdd7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1174657706
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,105 +374,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7991669768235246792, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_Name
-      value: Turti
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7991669768235246790, guid: 6b33fa318c07449c08971cf3b1d5f790,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
+    - target: {fileID: 7991669768235246792, guid: 6b33fa318c07449c08971cf3b1d5f790,
         type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 963598347}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnLanding
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 963598347}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnCrouch
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669768235246794, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: OnCrouchEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7991669770210009598, guid: 6b33fa318c07449c08971cf3b1d5f790,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.068
+      propertyPath: m_Name
+      value: Turti
       objectReference: {fileID: 0}
     - target: {fileID: 7991669768525406904, guid: 6b33fa318c07449c08971cf3b1d5f790,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991669770210009598, guid: 6b33fa318c07449c08971cf3b1d5f790,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.068
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b33fa318c07449c08971cf3b1d5f790, type: 3}

@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     [Header("Components")]
     protected Collider2D coll;
     protected Rigidbody2D rb;
-    protected CharacterController2D player;
+    public CharacterController2D player;
     protected Animator animator;
     [Header("Inputs")]
     public float horizontalMove = 0.0f;
@@ -82,4 +82,5 @@ public class Movement : MonoBehaviour
     public void OnCrouch(bool IsCrouching){
         animator.SetBool("IsCrouching",IsCrouching);
     }
+    
 }
