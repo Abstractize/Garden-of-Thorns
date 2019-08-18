@@ -14,12 +14,14 @@ public class Movement : MonoBehaviour
 
     public float speed;
     [Header("Jump Variables")]
+    public bool canjump = false;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2.0f;
     [Header("Components")]
     protected Collider2D coll;
     protected Rigidbody2D rb;
     protected CharacterController2D player;
+    protected Animator animator;
     [Header("Inputs")]
     public float horizontalMove = 0.0f;
     public float verticalMove = 0.0f;
@@ -36,13 +38,24 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         player = GetComponent<CharacterController2D>();
+        animator = GetComponent<Animator>();    
     }
-
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(jump)){
+            canjump = true;
+            animator.SetBool("IsJumping",true);  
+        }    
+        animator.SetFloat("Speed",Mathf.Abs(horizontalMove));
+    }
 
     void FixedUpdate()
     {
         MoveInput();
-        player.Move(horizontalMove * speed *Time.fixedDeltaTime,Input.GetKey(crouch),Input.GetKeyDown(jump));
+        
+        player.Move(horizontalMove * speed *Time.fixedDeltaTime,Input.GetKeyDown(crouch),canjump);
+        canjump = false;
     }
 
   
@@ -62,5 +75,11 @@ public class Movement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+    }
+    public void OnLanding(){
+        animator.SetBool("IsJumping",false);
+    }
+    public void OnCrouch(bool IsCrouching){
+        animator.SetBool("IsCrouching",IsCrouching);
     }
 }
