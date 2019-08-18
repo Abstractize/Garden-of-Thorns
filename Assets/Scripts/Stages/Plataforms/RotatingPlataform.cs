@@ -22,7 +22,6 @@ public class RotatingPlataform : MonoBehaviour
     }
     void RotatePlataform(){
         float rot = AngleConvert(transform.rotation.eulerAngles.z); 
-        Debug.Log(rot);
         if (rot <= -15.0f)
             side = Side.right;
         else if(rot >= 15.0f)
