@@ -12,6 +12,11 @@ public class Movement : MonoBehaviour
     public KeyCode itemL;
     public KeyCode itemR;
 
+    public Color playerColor;
+
+    [Range(1,4)]
+    public int playerNum;
+
     public float speed;
     [Header("Jump Variables")]
     public bool canjump = false;
@@ -28,17 +33,20 @@ public class Movement : MonoBehaviour
     private Vector2 playerInput;
     private Vector2 movement;
 
-   
-   
+    private string horizontalAxis;
+    private string verticalAxis;
+
     [Header("Movement")]
     protected Vector2 movePlayer;
 
     void Start()
     {
+        SetControllerNumber();
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         player = GetComponent<CharacterController2D>();
         animator = GetComponent<Animator>();    
+        //GetComponent<SpriteRenderer>().color = playerColor;
     }
     // Update is called once per frame
     void Update()
@@ -62,8 +70,8 @@ public class Movement : MonoBehaviour
     [ContextMenu("Move Input")]
     protected void MoveInput()
     {
-        horizontalMove = Input.GetAxis("Horizontal");
-        verticalMove = Input.GetAxis("Vertical");
+        horizontalMove = Input.GetAxis(horizontalAxis);
+        verticalMove = Input.GetAxis(verticalAxis);
     }
     protected void BetterJump()
     {
@@ -82,5 +90,8 @@ public class Movement : MonoBehaviour
     public void OnCrouch(bool IsCrouching){
         animator.SetBool("IsCrouching",IsCrouching);
     }
-    
+    private void SetControllerNumber(){
+        horizontalAxis = "J"+playerNum+"Horizontal";
+        verticalAxis = "J"+playerNum+"Vertical";
+    }
 }
