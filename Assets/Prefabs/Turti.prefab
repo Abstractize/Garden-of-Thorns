@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7991669768235246784}
   m_Layer: 0
   m_Name: Turti
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   canjump: 0
   fallMultiplier: 700
   lowJumpMultiplier: 70
+  player: {fileID: 0}
   horizontalMove: 0
   verticalMove: 0
 --- !u!58 &7991669768235246784
