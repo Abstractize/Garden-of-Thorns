@@ -12,18 +12,14 @@ public class Movement : MonoBehaviour
     public KeyCode itemL;
     public KeyCode itemR;
 
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
-
-
     public float speed;
-    [Range(1, 10)]
-    public float jumpVelocity;
-
-
+    [Header("Jump Variables")]
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2.0f;
     [Header("Components")]
     protected Collider2D coll;
-    private Rigidbody2D rb2d;
+    protected Rigidbody2D rb;
+    protected CharacterController2D player;
     [Header("Inputs")]
     public float horizontalMove = 0.0f;
     public float verticalMove = 0.0f;
@@ -35,21 +31,18 @@ public class Movement : MonoBehaviour
     [Header("Movement")]
     protected Vector2 movePlayer;
 
-   
-
-
-
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+        player = GetComponent<CharacterController2D>();
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         MoveInput();
-
+        player.Move(horizontalMove * speed *Time.fixedDeltaTime,Input.GetKey(crouch),Input.GetKeyDown(jump));
     }
 
   
@@ -57,34 +50,17 @@ public class Movement : MonoBehaviour
     protected void MoveInput()
     {
         horizontalMove = Input.GetAxis("Horizontal");
-
-       Vector2  movement = new Vector2(horizontalMove, 0.0f) * speed;
-
-        rb2d.AddForce(movement);
-
-
-
+        verticalMove = Input.GetAxis("Vertical");
     }
-
-    protected void Jump()
+    protected void BetterJump()
     {
-        if (Input.GetKeyDown(jump))
+        if (rb.velocity.y < 0)
         {
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetKeyDown(jump))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
-
-    protected void betterJump()
-    {
-        if (rb2d.velocity.y < 0)
-        {
-            rb2d.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        }
-        else if (rb2d.velocity.y > 0 && !Input.GetKeyDown(jump))
-        {
-            rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
-    }
-
-
 }
