@@ -1607,25 +1607,5 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.2700002
       objectReference: {fileID: 0}
-    - target: {fileID: 4258941523540056069, guid: 0588fde1241894638bb09c3269f1ad47,
-        type: 3}
-      propertyPath: playerColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258941523540056069, guid: 0588fde1241894638bb09c3269f1ad47,
-        type: 3}
-      propertyPath: playerColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258941523540056069, guid: 0588fde1241894638bb09c3269f1ad47,
-        type: 3}
-      propertyPath: playerColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258941523540056069, guid: 0588fde1241894638bb09c3269f1ad47,
-        type: 3}
-      propertyPath: playerNum
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0588fde1241894638bb09c3269f1ad47, type: 3}

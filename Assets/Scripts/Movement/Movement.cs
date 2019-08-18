@@ -46,7 +46,6 @@ public class Movement : MonoBehaviour
         coll = GetComponent<Collider2D>();
         player = GetComponent<CharacterController2D>();
         animator = GetComponent<Animator>();    
-        //GetComponent<SpriteRenderer>().color = playerColor;
     }
     // Update is called once per frame
     void Update()
