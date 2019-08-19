@@ -14,6 +14,7 @@ public class Canvas : MonoBehaviour
         menu = player.GetComponent<Menu>();
         itemsGO = transform.GetChild(0).GetComponent<Image>();
         toolsGO = transform.GetChild(1).GetComponent<Image>();
+        
     }
     // Start is called before the first frame update
     void Start()
