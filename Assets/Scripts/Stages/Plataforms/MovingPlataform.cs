@@ -30,7 +30,7 @@ public class MovingPlataform : MonoBehaviour
     void recalculate(){
         if (current >= points.Length)
             current = 0;
-    }
+    }/*
     private void OnCollisionStay2D(Collision2D other) {
         if (other.gameObject.CompareTag("Player")){
             Vector3 hit = other.contacts[0].normal;
@@ -43,5 +43,5 @@ public class MovingPlataform : MonoBehaviour
                 go.GetComponent<CharacterController2D>().Move(offset.x, false,false);
             }  
         }        
-    }
+    }*/
 }

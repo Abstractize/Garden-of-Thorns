@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7991669768235246794}
   - component: {fileID: 7991669768235246791}
   - component: {fileID: 7991669768235246784}
+  - component: {fileID: 2964480696789625909}
   m_Layer: 0
   m_Name: Turti
   m_TagString: Player
@@ -225,6 +226,8 @@ MonoBehaviour:
   crouch: 353
   itemL: 355
   itemR: 354
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  playerNum: 0
   speed: 40
   canjump: 0
   fallMultiplier: 700
@@ -232,6 +235,7 @@ MonoBehaviour:
   player: {fileID: 0}
   horizontalMove: 0
   verticalMove: 0
+  menu: {fileID: 0}
 --- !u!58 &7991669768235246784
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -248,6 +252,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.16080132}
   serializedVersion: 2
   m_Radius: 0.15919867
+--- !u!114 &2964480696789625909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7991669768235246792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081a70e272eef704a81626aac9139596, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+  - {fileID: 651130664432283312, guid: 2cc2b2bda7f454a07a33c714d87a4b51, type: 3}
+  tools:
+  - {fileID: 1777378213261294654, guid: 2939f674d1a834437b8a86206265637c, type: 3}
+  - {fileID: 3589189240549631199, guid: 1fe2679cfff6543e8afcfc1e90464d5e, type: 3}
+  - {fileID: 2689724251708155431, guid: f42c45919809b4710b8b2d3f7599798a, type: 3}
 --- !u!1 &7991669768525406911
 GameObject:
   m_ObjectHideFlags: 0

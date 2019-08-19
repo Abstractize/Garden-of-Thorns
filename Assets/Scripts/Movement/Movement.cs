@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour
 
     [Header("Movement")]
     protected Vector2 movePlayer;
+    public Menu menu;
 
     void Start()
     {
