@@ -8,18 +8,19 @@ public class Menu : MonoBehaviour
     public List<GameObject> inventory;
     public GameObject[] tools;
 
-    private int invIter;
-    private int toolIter;
+    public int invIter = 0;
+    public int toolIter = 0;
 
     private void Awake() {
-        invIter = 0;
-        toolIter = 0;
+
     }
     public GameObject GetItem(){
         return inventory[invIter];
     }
     public void NextItem(){
+        
         invIter++;
+        
         if (invIter == inventory.Capacity)
             invIter = 0; 
     }
@@ -34,6 +35,7 @@ public class Menu : MonoBehaviour
     }
     public void NextTool(){
         toolIter++;
+        
         if (toolIter == tools.Length)
             toolIter = 0; 
     }

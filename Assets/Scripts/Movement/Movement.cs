@@ -46,7 +46,8 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         player = GetComponent<CharacterController2D>();
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
+        menu = GetComponent<Menu>();
     }
     // Update is called once per frame
     void Update()
@@ -61,7 +62,10 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         MoveInput();
-        
+        if (Input.GetKeyDown(itemR))
+            menu.NextItem();
+        if (Input.GetKeyDown(itemL))
+            menu.NextTool();
         player.Move(horizontalMove * speed *Time.fixedDeltaTime,Input.GetKeyDown(crouch),canjump);
         canjump = false;
     }
