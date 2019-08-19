@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Pan : Tools
 {
-
+    private void Awake()
+    {
+        t = type.pan;
+    }
     public override void Action()
     {
         throw new System.NotImplementedException();

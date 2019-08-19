@@ -27,4 +27,12 @@ public class Canvas : MonoBehaviour
         itemsGO.sprite = menu.GetItem().GetComponent<Items>().spr;
         toolsGO.sprite = menu.GetTool().GetComponent<Tools>().sprite;
     }
+
+    void Action()
+    {
+       GameObject tool = menu.GetTool();
+
+       tool.GetComponent<Tools>().Action();
+       
+    }
 }
