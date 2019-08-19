@@ -10,17 +10,13 @@ public class Canvas : MonoBehaviour
     private Image itemsGO;
     private Image toolsGO;
 
-    private void Awake() {
-        menu = player.GetComponent<Menu>();
+    private void Start() {
+        menu = player.GetComponent<Movement>().menu;
         itemsGO = transform.GetChild(0).GetComponent<Image>();
         toolsGO = transform.GetChild(1).GetComponent<Image>();
         
     }
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
     // Update is called once per frame
     void Update()

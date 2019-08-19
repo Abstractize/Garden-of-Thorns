@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +41,7 @@ public class Movement : MonoBehaviour
     protected Vector2 movePlayer;
     public Menu menu;
 
-    void Start()
+    void Awake()
     {
         SetControllerNumber();
         rb = GetComponent<Rigidbody2D>();
@@ -66,11 +67,23 @@ public class Movement : MonoBehaviour
             menu.NextItem();
         if (Input.GetKeyDown(itemL))
             menu.NextTool();
+        if (Input.GetKeyDown(action))
+            menu.GetTool().GetComponent<Tools>().Action();
+        if (Input.GetKeyDown(drop))
+            ThrowFood();
         player.Move(horizontalMove * speed *Time.fixedDeltaTime,Input.GetKeyDown(crouch),canjump);
         canjump = false;
     }
 
-  
+    private void ThrowFood()
+    {
+        GameObject go = menu.GetItem();
+        GameObject throwable = Instantiate(go, this.transform.position + new Vector3(2,0), Quaternion.identity);
+        throwable.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 5);
+        menu.DeleteItem();
+
+    }
+
     [ContextMenu("Move Input")]
     protected void MoveInput()
     {

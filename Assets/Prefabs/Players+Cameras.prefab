@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 4258941523540056072}
   - component: {fileID: 4258941523540056069}
   - component: {fileID: 4258941523540056066}
-  - component: {fileID: 8994008330250883319}
+  - component: {fileID: 3274482904121597821}
   m_Layer: 0
   m_Name: Turti 1
   m_TagString: Player
@@ -405,7 +405,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.16080132}
   serializedVersion: 2
   m_Radius: 0.15919867
---- !u!114 &8994008330250883319
+--- !u!114 &3274482904121597821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,8 +423,6 @@ MonoBehaviour:
   - {fileID: 1777378213261294654, guid: 2939f674d1a834437b8a86206265637c, type: 3}
   - {fileID: 3589189240549631199, guid: 1fe2679cfff6543e8afcfc1e90464d5e, type: 3}
   - {fileID: 2689724251708155431, guid: f42c45919809b4710b8b2d3f7599798a, type: 3}
-  invIter: 0
-  toolIter: 0
 --- !u!1 &4258941523543516141
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +439,7 @@ GameObject:
   - component: {fileID: 4258941523543516143}
   - component: {fileID: 4258941523543516130}
   - component: {fileID: 4258941523543516133}
-  - component: {fileID: 8994008330254871312}
+  - component: {fileID: 7369641614325632842}
   m_Layer: 0
   m_Name: Turti 2
   m_TagString: Player
@@ -677,7 +675,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.16080132}
   serializedVersion: 2
   m_Radius: 0.15919867
---- !u!114 &8994008330254871312
+--- !u!114 &7369641614325632842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,8 +693,6 @@ MonoBehaviour:
   - {fileID: 1777378213261294654, guid: 2939f674d1a834437b8a86206265637c, type: 3}
   - {fileID: 3589189240549631199, guid: 1fe2679cfff6543e8afcfc1e90464d5e, type: 3}
   - {fileID: 2689724251708155431, guid: f42c45919809b4710b8b2d3f7599798a, type: 3}
-  invIter: 0
-  toolIter: 0
 --- !u!1 &4258941523640266759
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +709,7 @@ GameObject:
   - component: {fileID: 4258941523640266757}
   - component: {fileID: 4258941523640266760}
   - component: {fileID: 4258941523640266767}
-  - component: {fileID: 8994008330023942394}
+  - component: {fileID: 4966705028737449290}
   m_Layer: 0
   m_Name: Turti 3
   m_TagString: Player
@@ -949,7 +945,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.16080132}
   serializedVersion: 2
   m_Radius: 0.15919867
---- !u!114 &8994008330023942394
+--- !u!114 &4966705028737449290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -967,8 +963,6 @@ MonoBehaviour:
   - {fileID: 1777378213261294654, guid: 2939f674d1a834437b8a86206265637c, type: 3}
   - {fileID: 3589189240549631199, guid: 1fe2679cfff6543e8afcfc1e90464d5e, type: 3}
   - {fileID: 2689724251708155431, guid: f42c45919809b4710b8b2d3f7599798a, type: 3}
-  invIter: 0
-  toolIter: 0
 --- !u!1 &4258941523770697432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1069,7 @@ GameObject:
   - component: {fileID: 4258941524269012198}
   - component: {fileID: 4258941524269012203}
   - component: {fileID: 4258941524269012204}
-  - component: {fileID: 3541866646085313835}
+  - component: {fileID: 3284243086166075653}
   m_Layer: 0
   m_Name: Turti 4
   m_TagString: Player
@@ -1311,7 +1305,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.16080132}
   serializedVersion: 2
   m_Radius: 0.15919867
---- !u!114 &3541866646085313835
+--- !u!114 &3284243086166075653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1329,8 +1323,6 @@ MonoBehaviour:
   - {fileID: 1777378213261294654, guid: 2939f674d1a834437b8a86206265637c, type: 3}
   - {fileID: 3589189240549631199, guid: 1fe2679cfff6543e8afcfc1e90464d5e, type: 3}
   - {fileID: 2689724251708155431, guid: f42c45919809b4710b8b2d3f7599798a, type: 3}
-  invIter: 0
-  toolIter: 0
 --- !u!1 &4258941524583879315
 GameObject:
   m_ObjectHideFlags: 0
