@@ -10,10 +10,10 @@ public class EnemySprite : MonoBehaviour
     void Update()
     {
         if(aIPath.desiredVelocity.x >= 0.1f){
-            transform.localScale = new Vector3(-1f,1f,1f);
+            transform.localScale = new Vector3(-7f,7f,7f);
         }
         else if(aIPath.desiredVelocity.x <= 0.1f){
-            transform.localScale = new Vector3(1f,1f,1f);
+            transform.localScale = new Vector3(7f,7f,7f);
         }
     }
 }
