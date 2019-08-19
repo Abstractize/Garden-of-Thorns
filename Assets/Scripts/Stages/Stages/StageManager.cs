@@ -15,11 +15,12 @@ public class StageManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canvas = cs;
         player1 = playersandcameras.transform.GetChild(0).gameObject;
         player2 = playersandcameras.transform.GetChild(1).gameObject;
         player3 = playersandcameras.transform.GetChild(2).gameObject;
         player4 = playersandcameras.transform.GetChild(3).gameObject;
-        canvas = cs;
+        
         canvas.transform.GetChild(0).gameObject.GetComponent<Canvas>().player = player1.transform.GetChild(0).gameObject;
         canvas.transform.GetChild(1).gameObject.GetComponent<Canvas>().player = player2.transform.GetChild(0).gameObject;
         canvas.transform.GetChild(2).gameObject.GetComponent<Canvas>().player = player3.transform.GetChild(0).gameObject;

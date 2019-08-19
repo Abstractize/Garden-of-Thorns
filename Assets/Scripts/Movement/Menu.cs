@@ -8,35 +8,37 @@ public class Menu : MonoBehaviour
     public List<GameObject> inventory;
     public GameObject[] tools;
 
-    public int invIter = 0;
-    public int toolIter = 0;
+    [SerializeField]private int invIter;
+    [SerializeField]private int toolIter;
 
     private void Awake() {
-
+        this.invIter = 0;
+        this.toolIter = 0;
     }
     public GameObject GetItem(){
-        return inventory[invIter];
+        return this.inventory[this.invIter];
     }
     public void NextItem(){
-        
-        invIter++;
-        
-        if (invIter == inventory.Capacity)
-            invIter = 0; 
+        this.invIter++;
+        if (this.invIter == this.inventory.Capacity)
+            this.invIter = 0; 
     }
     public void DeleteItem(int item){
-        inventory.RemoveAt(item);
+        this.inventory.RemoveAt(item);
+        if (this.invIter >= this.inventory.Capacity)
+            this.invIter = 0;
     }
     public void AddItem(GameObject item){
-        inventory.Add(item);
+        this.inventory.Add(item);
     }
     public GameObject GetTool(){
-        return tools[toolIter];
+        Debug.Log(this.toolIter);
+        return this.tools[this.toolIter];
     }
     public void NextTool(){
-        toolIter++;
+        this.toolIter++;
         
-        if (toolIter == tools.Length)
-            toolIter = 0; 
+        if (this.toolIter == this.tools.Length)
+            this.toolIter = 0; 
     }
 }

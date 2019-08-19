@@ -9,7 +9,7 @@ public class LoadStage : MonoBehaviour
     public Vector3 Spawn3;
     public Vector3 Spawn4;
     // Start is called before the first frame update
-    private void Awake() {
+    private void Start() {
     
         GameObject player1 = Instantiate(StageManager.player1,Spawn1,Quaternion.identity);
         GameObject player2 = Instantiate(StageManager.player2,Spawn2,Quaternion.identity);

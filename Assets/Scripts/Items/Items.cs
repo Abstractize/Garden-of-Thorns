@@ -6,7 +6,13 @@ public abstract class Items: MonoBehaviour
 {
     public Sprite spr;
     public typeI t;
-
+    public void OnCollisionEnter2D(Collision2D other) {
+        GameObject player = other.gameObject;
+        if (player.tag.Equals("Player"))
+            player.GetComponent<Menu>().AddItem(this.gameObject);
+        Destroy(this.gameObject);
+            
+    }
 }
 public enum typeI
 {

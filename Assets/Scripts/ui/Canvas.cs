@@ -24,16 +24,8 @@ public class Canvas : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {       
         itemsGO.sprite = menu.GetItem().GetComponent<Items>().spr;
         toolsGO.sprite = menu.GetTool().GetComponent<Tools>().sprite;
-    }
-
-    void Action()
-    {
-       GameObject tool = menu.GetTool();
-
-       tool.GetComponent<Tools>().Action();
-       
     }
 }
